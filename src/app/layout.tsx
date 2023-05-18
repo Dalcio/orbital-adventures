@@ -14,7 +14,7 @@ export default function RootLayout({
       <head>
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
       </head>
-      <body className={bellefair.className}>
+      <body className={`${bellefair.className} pl-[55px] pt-[48px]`}>
         <LayoutHeader />
         {children}
       </body>
