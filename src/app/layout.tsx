@@ -1,3 +1,4 @@
+import { LayoutHeader } from "@/components/layout/layout-header";
 import "./globals.css";
 import { Bellefair } from "next/font/google";
 
@@ -13,7 +14,10 @@ export default function RootLayout({
       <head>
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
       </head>
-      <body className={bellefair.className}>{children}</body>
+      <body className={bellefair.className}>
+        <LayoutHeader />
+        {children}
+      </body>
     </html>
   );
 }
