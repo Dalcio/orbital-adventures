@@ -16,6 +16,21 @@
   }
 }
 
+* {
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent;
+}
+
+/* Define the thumb appearance */
+*::-webkit-scrollbar-thumb {
+  background-color: #151720;
+}
+
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(

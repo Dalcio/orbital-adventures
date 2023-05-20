@@ -28,16 +28,18 @@ const Item = ({ label, href, isActive, pos }: ItemProps) => (
 export const LayoutHeader = () => {
   const pathname = usePathname();
 
-  const isActive = (href: string) => pathname?.startsWith(href) ?? false;
+  const isActive = (href: string) =>
+    (href !== "/" && pathname?.startsWith(href)) || pathname === href;
 
   return (
-    <div className="flex items-center justify-between sticky top-0">
+    <header className="sticky top-0 flex items-center justify-between">
       <Image src="/logo.svg" width={48} height={48} alt="Star Logo" />
+      <div className="flex flex-grow h-[1px] bg-white bg-opacity-[25.14%] relative right-[-54px]" />
       <ul className="flex list-none gap-x-[48px] px-[168px] bg-white bg-opacity-5">
         <Item label="Home" href="/" isActive={isActive} pos={0} />
         <Item
           label="Destination"
-          href="/destination"
+          href="/destinations"
           isActive={isActive}
           pos={1}
         />
@@ -49,6 +51,6 @@ export const LayoutHeader = () => {
           pos={3}
         />
       </ul>
-    </div>
+    </header>
   );
 };
