@@ -25,7 +25,13 @@ export default function Destinations() {
         bgTablet="/assets/destination/background-destination-tablet.jpg"
         bgMobile="/assets/destination/background-destination-mobile.jpg"
       />
-      <Destination />
+      <div className="flex-grow flex flex-col justify-stretch gap-[30px] py-[30px]">
+        <p className="text-center md:text-justify uppercase text-xl text-white font-bold tracking-[3px] ">
+          <span className="mix-blend-normal opacity-40">01</span>
+          PICK a location
+        </p>
+        <Destination />
+      </div>
     </>
   );
 }

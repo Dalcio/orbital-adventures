@@ -13,7 +13,8 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-        <meta property="og:site_name" content="Orbital Adventures" />        
+        <meta property="og:site_name" content="Orbital Adventures" />
+        
         <meta name="author" content="Dálcio Macuete Garcia" />
       </head>
       <body

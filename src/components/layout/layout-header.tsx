@@ -32,11 +32,9 @@ export const LayoutHeader = () => {
     (href !== "/" && pathname?.startsWith(href)) || pathname === href;
 
   return (
-    <header className="sticky top-[48px] z-10 flex items-center justify-between">
-      <Image src="/logo.svg" width={48} height={48} alt="Star Logo" />
-      <div className="flex flex-grow h-[1px] bg-white bg-opacity-[25.14%] relative right-[-54px]" />
+    <header className="sticky top-[48px] ml-auto z-10 flex items-center justify-between">
       <ul className="relative flex list-none gap-x-[48px] px-[168px]">
-        <div className="absolute inset-0 bg-white bg-opacity-[0.04] blur-[1] -z-[1]" />
+        <div className="absolute inset-0 bg-black bg-opacity-[0.4] blur-[1] -z-[1]" />
         <Item label="Home" href="/" isActive={isActive("/")} pos={0} />
         <Item
           label="Destination"

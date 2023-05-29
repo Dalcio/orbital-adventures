@@ -24,7 +24,7 @@ type DestinationHeaderProps = {
 };
 
 export const DestinationHeader = ({ current }: DestinationHeaderProps) => (
-  <div className="flex gap-x-[38px]">
+  <div className="flex justify-center md:justify-start gap-x-[38px]">
     <DestinationItem label="moon" current={current.toLowerCase()} />
     <DestinationItem label="mars" current={current.toLowerCase()} />
     <DestinationItem label="europa" current={current.toLowerCase()} />
