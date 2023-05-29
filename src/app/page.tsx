@@ -1,4 +1,9 @@
 import Head from "next/head";
+import bgDesktop from "@/assets/home/background-home-desktop.jpg";
+import bgTablet from "@/assets/home/background-home-tablet.jpg";
+import bgMobile from "@/assets/home/background-home-mobile.jpg";
+import { Background } from "@/components/layout/background";
+import Link from "next/link";
 
 const metadata = {
   title: "Orbital Adventures",
@@ -18,7 +23,12 @@ export default function Home() {
         <meta property="og:description" content={metadata.description} />
         <title>{metadata.title}</title>
       </Head>
-      <main className="flex items-center justify-between p-24">
+      <div className="flex-grow flex items-center justify-between p-24">
+        <Background
+          bgDesktop={bgDesktop}
+          bgTablet={bgTablet}
+          bgMobile={bgMobile}
+        />
         <div className="max-w-[445px]">
           <h5 className="text-xl tracking-[4.76]">SO, YOU WANT TO TRAVEL TO</h5>
           <h1 className="text-5xl">SPACE</h1>
@@ -29,14 +39,16 @@ export default function Home() {
             this world experience!
           </div>
         </div>
-        <div className="flex items-center">
-          <div className="flex items-center justify-center rounded-full hover:bg-white hover:bg-opacity-50 transition duration-[500ms] p-[40px] cursor-pointer">
-            <div className="flex items-center justify-center w-[234px] h-[234px] rounded-full bg-white text-[#0B0D17] text-[32px]">
-              EXPLORE
+        <Link href="/destinations/moon" >
+          <div className="flex items-center">
+            <div className="flex items-center justify-center rounded-full hover:bg-white hover:bg-opacity-50 transition duration-[200ms] p-[40px] cursor-pointer">
+              <div className="flex items-center justify-center w-[234px] h-[234px] rounded-full bg-white text-[#0B0D17] text-[32px]">
+                EXPLORE
+              </div>
             </div>
           </div>
-        </div>
-      </main>
+        </Link>
+      </div>
     </>
   );
 }
